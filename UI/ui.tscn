@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cttxo56ejuk30"]
+
+[ext_resource type="Script" uid="uid://cf7j7fu70onnx" path="res://UI/ui.gd" id="1_2fwl4"]
+
+[node name="UI" type="VBoxContainer"]
+anchors_preset = -1
+anchor_right = 0.184
+anchor_bottom = 1.0
+offset_right = 68.032
+grow_vertical = 2
+script = ExtResource("1_2fwl4")
+
+[node name="Distance" type="Label" parent="."]
+layout_mode = 2
+text = "Distance: -"
+
+[node name="Selectors" type="GridContainer" parent="."]
+layout_mode = 2
+
+[node name="Dummy1" type="Control" parent="Selectors"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Dummy2" type="Control" parent="Selectors"]
+custom_minimum_size = Vector2(175, 10)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Selectors"]
+layout_mode = 2
+text = "Start Vertex: "
+
+[node name="StartSelector" type="OptionButton" parent="Selectors"]
+layout_mode = 2
+autowrap_mode = 2
+fit_to_longest_item = false
+
+[node name="Label2" type="Label" parent="Selectors"]
+layout_mode = 2
+text = "End Vertex: "
+
+[node name="EndSelector" type="OptionButton" parent="Selectors"]
+layout_mode = 2
+fit_to_longest_item = false
+
+[node name="Path" type="Label" parent="."]
+layout_mode = 2
+autowrap_mode = 2
+
+[connection signal="item_selected" from="Selectors/StartSelector" to="." method="Selector_Changed"]
+[connection signal="item_selected" from="Selectors/EndSelector" to="." method="Selector_Changed"]

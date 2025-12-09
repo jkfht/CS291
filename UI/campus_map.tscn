@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://lfync877l4d0"]
+
+[ext_resource type="Script" uid="uid://c86j467vi7de8" path="res://UI/campus_map.gd" id="1_fbfkx"]
+[ext_resource type="PackedScene" uid="uid://45troiorx36v" path="res://graph/vertex.tscn" id="2_445k4"]
+
+[node name="Campus Map" type="Sprite2D"]
+script = ExtResource("1_fbfkx")
+
+[node name="Vertex" parent="." instance=ExtResource("2_445k4")]

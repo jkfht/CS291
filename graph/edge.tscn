@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmtmb4c0iyp"]
+
+[ext_resource type="Script" uid="uid://tp7nrfhnkrgt" path="res://graph/edge.gd" id="1_25cad"]
+
+[node name="Edge" type="Node"]
+script = ExtResource("1_25cad")

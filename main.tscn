@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsfa2n5pnuld6"]
+
+[ext_resource type="Script" uid="uid://oxyxfg2j0jgg" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cs3x3ve2kc04x" path="res://graph/graph.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://lfync877l4d0" path="res://UI/campus_map.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cttxo56ejuk30" path="res://UI/ui.tscn" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://o31ek0m6rkq4" path="res://campus.gd" id="5_lquwl"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_h2yge")
+
+[node name="Graph" parent="." instance=ExtResource("3_lquwl")]
+
+[node name="Map" parent="." instance=ExtResource("4_1bvp3")]
+position = Vector2(430, 323)
+scale = Vector2(0.46, 0.46)
+
+[node name="Campus" type="Node" parent="."]
+script = ExtResource("5_lquwl")
+
+[node name="UI" parent="." instance=ExtResource("5_7mycd")]
+anchor_left = 0.0234375
+anchor_right = 0.145382
+offset_left = 841.0
+offset_top = -1.0
+offset_right = 981.52
+offset_bottom = -1.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="Recalculate_Path" from="UI" to="." method="Shortest_Path"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://45troiorx36v"]
+
+[ext_resource type="Script" uid="uid://dqcf4ui46l6ei" path="res://graph/vertex.gd" id="1_wg0re"]
+
+[node name="Vertex" type="Node"]
+script = ExtResource("1_wg0re")
